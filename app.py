@@ -20,7 +20,7 @@ try:
         with st.chat_message(role_to_streamlit(message.role)):
             st.markdown(message.parts[0].text)
 
-    if prompt := st.chat_input("ชินจังชื่ออะไร"):
+    if prompt := st.chat_input("Text_Here"):
         st.chat_message('user').markdown(prompt)
         response = st.session_state.chat.send_message(prompt)
         with st.chat_message('assistant'):
